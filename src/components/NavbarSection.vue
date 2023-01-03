@@ -1,36 +1,34 @@
 <template>
     <v-app-bar app color="#3853D8" dark>
-        <v-btn icon>
+        <v-btn icon class="text-white">
             <v-icon>mdi-magnify</v-icon>
         </v-btn>
         <v-divider vertical class="ml-1 mr-3"></v-divider>
-        <v-btn icon>
+        <v-btn icon class="text-white">
             <v-icon>mdi-menu</v-icon>
         </v-btn>
         
-        <v-toolbar-title>
+        <v-toolbar-title class="text-white">
             <span class="caption">Select</span><br>Category
         </v-toolbar-title>
         <v-divider vertical class="ml-5"></v-divider>
-        <div style="position:absolute; margin-left:auto; margin-right:auto; left: 0; right: 0; text-align: center;">
+        <div style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center; color: white;">
             <h4>AAE IdeaPro</h4>
         </div>
         
         <v-spacer></v-spacer>
         <v-divider vertical></v-divider>
-        <v-btn icon class="mx-1">
+        <v-btn icon class="mx-1 text-white">
             <v-icon>mdi-account-outline</v-icon>
         </v-btn>
 
-
-        <v-spacer></v-spacer>
         <v-divider vertical></v-divider>
-        <v-btn icon>
+        <v-btn icon class="text-white">
             <v-icon>mdi-heart-outline</v-icon>
         </v-btn>
 
         <v-divider vertical></v-divider>
-        <v-btn icon class="mx-1">
+        <v-btn icon class="mx-1 text-white">
             <v-badge color="#94D0EF" content="2">
                 <v-icon>mdi-cart-outline</v-icon>
             </v-badge>
@@ -38,11 +36,11 @@
     </v-app-bar>
 </template>
 
-<script setup>
+<script>
 
 </script>
 
-<style>
+<style scoped>
 .v-toolbar__title {
     font-size: 1rem !important;
 }

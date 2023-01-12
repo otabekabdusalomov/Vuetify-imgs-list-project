@@ -1,9 +1,9 @@
 <template>
-    <v-container fluid>
+    <div class="container pt-5">
         <v-card color="#3853D8" height="150px" tile flat class="f-flex align-center justify-center" dark>
             <v-row>
                 <v-col cols="12" sm="12">
-                    <h4 class="text-white text-center mt-14">MEN'S LIFESIYLE SHOES</h4> 
+                    <h4 class="text-white text-center mt-16">MEN'S LIFESIYLE SHOES</h4> 
                 </v-col>
                 
                 <v-col cols="12" sm="12">
@@ -31,7 +31,7 @@
                             </v-btn>
                         </v-col>
                         <v-colo cols="12" sm="6">
-                            <v-img src="main1.jpg" height="300" width="200" contain class="mt-n2"></v-img>
+                            <v-img src="main1.jpg" height="300" width="300" contain class="mt-n2"></v-img>
                         </v-colo>
                        </v-row> 
                     </v-card>
@@ -57,8 +57,85 @@
                     </v-card>
                 </v-col>
             </v-row>
+            <v-row>
+               <v-col cols="12" sm="3" class="mt-n6 pr-0">
+                <v-toolbar flat outlined>
+                    <v-toolbar-title><strong>Filter</strong></v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-divider vertical></v-divider>
+                    <v-btn icon class="ml-1">
+                        <v-icon color="#3853D8">
+                            mdi-sync
+                        </v-icon>
+                    </v-btn>
+                </v-toolbar>
+               </v-col>
+
+                <v-col cols="12" sm="3" class="mt-n6 px-0">
+                    <v-toolbar flat outlined>
+                       <v-title>SPORT BY:
+                        <span>Price $-$$</span>
+                       </v-title> 
+                       <v-spacer></v-spacer>
+                       <v-btn icon class="mr-4">
+                        <v-icon color="black" >mdi-menu-down</v-icon>
+                       </v-btn>
+                    </v-toolbar>
+                </v-col>
+
+                <v-col class="mt-n6 px-0" cols="12" sm="3">
+                    <v-toolbar flat outlined class="">
+                        <v-title>SHOW:<span> 12</span></v-title>
+                        <v-spacer></v-spacer>
+                        <v-btn icon class="mr-4">
+                           <v-icon color="black">mdi-icon-down</v-icon>
+                        </v-btn>
+                    </v-toolbar>
+                </v-col>
+
+                <v-col cols="12" sm="3" class="mt-n6 pl-0">
+                    <v-toolbar flat outlined>
+                        <v-btn icon class="mr-1">
+                          <v-icon color="#3853D8">mdi-apps</v-icon>
+                        </v-btn>
+                        <v-divider vertical></v-divider>
+                        <v-btn icon class="mx-1">
+                            <v-icon color="grey">mdi-format-list-bulleted</v-icon>
+                        </v-btn>
+                        <v-divider vertical></v-divider>
+                        <v-toolbar-tittle class="ml-2">
+                            <v-title>COMPARE :</v-title>
+                        </v-toolbar-tittle>
+                        <v-spacer></v-spacer>
+                        <v-badge color="#3853D8" content="3" class="mr-2"></v-badge>
+                    </v-toolbar>
+                </v-col>
+
+                <v-col cols="3" class="py-0 pr-0 mt-n3">
+                    <v-card flat outlined tile>
+                        <v-toolbar flat>
+                            <v-icon icon="black" class="mr-2">mdi-chevron-down</v-icon>
+                             <strong>CATEGORIES</strong>
+                             <v-spacer></v-spacer>
+                             <v-icon color="grey" small>mdi-close</v-icon> 
+                        </v-toolbar>
+                        <v-list dense class="mt-n5">
+                           <v-list-item v-for="style in styles" :key="style.title">
+                             <v-list-item-content>
+                                <v-list-item-title v-text="style.title" class="ml-8"></v-list-item-title>
+                             </v-list-item-content>
+                             <v-list-item-action>
+                                <v-list-item-item-sublitle v-text="style.count" class="ml-8"></v-list-item-item-sublitle>
+                             </v-list-item-action>
+                           </v-list-item>
+                        </v-list>
+
+                        
+                    </v-card>
+                </v-col>
+            </v-row>
         </v-card>
-    </v-container>
+    </div>
 </template>
 
 <script>
@@ -86,14 +163,43 @@ export default {
             disabled: false,
             href: "breadcrubs_shoes"
         },
-        ]
-    })
-};
+    ],
+    styles: [
+        { title: 'Lifestyle',
+          count: '1',
+        },
+        { title: 'Running',
+          count: '23',
+        },
+        { title: 'Training & Gym',
+          count: '45',
+        },
+        { title: 'Basketball',
+          count: '11',
+        },
+        { title: 'Football',
+          count: '15',
+        },
+        { title: 'Soccer',
+          count: '32',
+        },
+        { title: 'Baseball',
+          count: '8',
+        },
+        { title: 'Golf',
+          count: '15',
+        },
+        { title: 'Sketboarding',
+          count: '22',
+        },
+    ],
+})
+}
 </script>
 
 <style>
 .container {
-    padding: 0px !important;
+    padding-top: 10px !important;
 }
 .v-btn.withoutupercase {
     text-decoration: none;

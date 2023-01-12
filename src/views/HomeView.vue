@@ -27,7 +27,6 @@ export default defineComponent({
 });
 </script>
 
-
 <style>
 .index {
   z-index: 9999;

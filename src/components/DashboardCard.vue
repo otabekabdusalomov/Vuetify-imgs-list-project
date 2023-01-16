@@ -187,7 +187,7 @@
                             <v-chip filter color="#F27229" text-color="white"></v-chip>
                             <v-chip filter color="#EB3427" text-color="white"></v-chip>
                             <v-chip filter color="#923FA3" text-color="white"></v-chip>
-                            <v-chip filter color="##923A"  text-color="white"></v-chip>
+                            <v-chip filter color="#EB3427"  text-color="white"></v-chip>
                             <v-chip filter color="#5EB524" text-color="white"></v-chip>
                             <v-chip filter color="#7C5F4D" text-color="white"></v-chip>
                         </v-chip-group>
@@ -206,6 +206,25 @@
                             </v-chip>
                         </v-chip-group>
                     </v-card>
+                </v-col>
+
+                <v-col cols="9" class="mt-n3">
+                    <row class="d-flex flex-wrap">
+                      <v-col cols="12" sm="4" v-for="(clothe, i) in clothes" :key="i" class="clothe.class">
+                        <v-hover v-slot:default="{hover}">
+                           <v-card height="300" align="center">
+                             <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn color="black" small dark>{{clothes.sold}}</v-btn>
+                             </v-card-actions>
+                             <v-img src=nike__item3.png width="200" height="200" contain></v-img>
+                             <v-card-text class="mt-n4">
+                                <strong :class="hover ? `red--text` : `black--text`">{{clothe.title}}</strong>
+                             </v-card-text>
+                           </v-card>
+                        </v-hover>
+                      </v-col>
+                    </row>
                 </v-col>
             </v-row>
         </v-card>
@@ -283,6 +302,80 @@ export default {
     ],
     sizes: [
         '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45','46',
+    ],
+    clothes: [
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-19%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item2.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
     ],
 })
 }

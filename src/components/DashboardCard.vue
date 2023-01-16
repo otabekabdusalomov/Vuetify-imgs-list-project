@@ -173,6 +173,39 @@
                           </v-list-item>
                         </v-list>
                     </v-card>
+                    <v-card flat outlined>
+                        <v-toolbar flat>
+                            <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+                            <strong>COLOR</strong>
+                            <v-spacer></v-spacer>
+                            <v-icon color="grey" small>mdi-close</v-icon>
+                        </v-toolbar>
+                        <v-chip-group>
+                            <v-chip class="ml-2" color="black" text-color="black"></v-chip>
+                            <v-chip filter color="#E6E6E6" text-color="white"></v-chip>
+                            <v-chip filter color="#FFB500" text-color="white"></v-chip>
+                            <v-chip filter color="#F27229" text-color="white"></v-chip>
+                            <v-chip filter color="#EB3427" text-color="white"></v-chip>
+                            <v-chip filter color="#923FA3" text-color="white"></v-chip>
+                            <v-chip filter color="##923A"  text-color="white"></v-chip>
+                            <v-chip filter color="#5EB524" text-color="white"></v-chip>
+                            <v-chip filter color="#7C5F4D" text-color="white"></v-chip>
+                        </v-chip-group>
+                    </v-card>
+
+                    <v-card flat outlined>
+                        <v-toolbar flat>
+                            <v-icon color="black" class="mr-2">mdi-chevron-down</v-icon>
+                            <strong>SIZE</strong>
+                            <v-spacer></v-spacer>
+                            <v-icon color="grey" small>mdi-close</v-icon>
+                        </v-toolbar>
+                        <v-chip-group column multiple active-class="blue white--text" class="ml-2">
+                            <v-chip v-for="size in sizes" :key="size" :value="size" class="size">
+                               {{ size }}
+                            </v-chip>
+                        </v-chip-group>
+                    </v-card>
                 </v-col>
             </v-row>
         </v-card>
@@ -247,6 +280,9 @@ export default {
         { title: 'Basketball',
           state: 'false',
         },
+    ],
+    sizes: [
+        '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45','46',
     ],
 })
 }

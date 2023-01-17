@@ -215,11 +215,11 @@
                            <v-card height="300" align="center">
                              <v-card-actions>
                                 <v-spacer></v-spacer>
-                                <v-btn color="black" small dark>{{clothes.sold}}</v-btn>
+                                <v-btn color="grey">{{clothe.solid}}</v-btn>
                              </v-card-actions>
-                             <v-img src=nike__item3.png width="200" height="200" contain></v-img>
+                             <v-img width="170" height="170" contain :src="clothe.image" alt="product img"></v-img>
                              <v-card-text class="mt-n4">
-                                <strong :class="hover ? `red--text` : `black--text`">{{clothe.title}}</strong>
+                                <strong :class="hover ? `red--text` : `black--text`">{{clothe.title}}</strong>              
                              </v-card-text>
                            </v-card>
                         </v-hover>
@@ -303,22 +303,22 @@ export default {
     sizes: [
         '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45','46',
     ],
-    clothes: [
+     clothes: [
         { class: 'pa-0',
           solid: '-20%',
-          image: 'nike__item2.png',
+          image: 'http://www.serebii.net/pokemongo/pokemon/001.png',
+          title: 'Bulbasaur',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item1.png',
           title: 'KD 8 EXT',
           price: '$ 10.0',
         },
         { class: 'pa-0',
           solid: '-20%',
-          image: 'nike__item2.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-20%',
-          image: 'nike__item2.png',
+          image: 'nike__item1.png',
           title: 'KD 8 EXT',
           price: '$ 10.0',
         },
@@ -330,7 +330,19 @@ export default {
         },
         { class: 'pa-0',
           solid: '-20%',
-          image: 'nike__item2.png',
+          image: 'nike__item3.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item4.png',
+          title: 'KD 8 EXT',
+          price: '$ 10.0',
+        },
+        { class: 'pa-0',
+          solid: '-20%',
+          image: 'nike__item1.png',
           title: 'KD 8 EXT',
           price: '$ 10.0',
         },
@@ -342,31 +354,19 @@ export default {
         },
         { class: 'pa-0',
           solid: '-20%',
-          image: 'nike__item2.png',
+          image: 'nike__item3.png',
           title: 'KD 8 EXT',
           price: '$ 10.0',
         },
         { class: 'pa-0',
           solid: '-20%',
-          image: 'nike__item2.png',
+          image: 'nike__item4.png',
           title: 'KD 8 EXT',
           price: '$ 10.0',
         },
         { class: 'pa-0',
           solid: '-20%',
-          image: 'nike__item2.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-20%',
-          image: 'nike__item2.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-20%',
-          image: 'nike__item2.png',
+          image: 'nike__item1.png',
           title: 'KD 8 EXT',
           price: '$ 10.0',
         },

@@ -215,12 +215,32 @@
                            <v-card height="300" align="center">
                              <v-card-actions>
                                 <v-spacer></v-spacer>
-                                <v-btn color="grey">{{clothe.solid}}</v-btn>
+                                <v-btn color="black" small dark>{{clothe.solid}}</v-btn>
                              </v-card-actions>
                              <v-img width="170" height="170" contain :src="clothe.image" alt="product img"></v-img>
                              <v-card-text class="mt-n4">
                                 <strong :class="hover ? `red--text` : `black--text`">{{clothe.title}}</strong>              
                              </v-card-text>
+                                <strong small>{{ clothe.desc }}</strong>
+
+                                <!-- HOVER -->
+                             <v-expand-transition>
+                              <div v-if="hover" class="d-flex transition-fast-in-fast-out blue v-card--reveal display-3 white-text" style="height: 100%;">
+                                 <v-btn rounded color="white">
+                                   <v-icon>mdi-cart-outlined</v-icon>
+                                  Buy
+                                 </v-btn>
+
+                                 <v-btn fab small color="white" class="ml-2">
+                                   <v-icon color="black">mdi-content-copy</v-icon>
+                                 </v-btn>
+
+                                 <v-btn fab small color="white" class="ml-2">
+                                   <v-icon color="black">mdi-heart-outline</v-icon>
+                                 </v-btn>
+                                 
+                              </div>
+                             </v-expand-transition>
                            </v-card>
                         </v-hover>
                       </v-col>
@@ -305,76 +325,76 @@ export default {
     ],
      clothes: [
         { class: 'pa-0',
-          solid: '-20%',
-          image: 'http://www.serebii.net/pokemongo/pokemon/001.png',
+          solid: '-8%',
+          image: 'nike__item2.png',
           title: 'Bulbasaur',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
-          image: 'nike__item1.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-20%',
-          image: 'nike__item1.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-19%',
-          image: 'nike__item2.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-20%',
+          solid: '-7%',
           image: 'nike__item3.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
-          image: 'nike__item4.png',
-          title: 'KD 8 EXT',
-          price: '$ 10.0',
-        },
-        { class: 'pa-0',
-          solid: '-20%',
+          solid: '-8%',
           image: 'nike__item1.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
+          solid: '-8%',
           image: 'nike__item2.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
+          solid: '-8%',
           image: 'nike__item3.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
+          solid: '-7%',
           image: 'nike__item4.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
+          solid: '-8%',
           image: 'nike__item1.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
         },
         { class: 'pa-0',
-          solid: '-20%',
+          solid: '-7%',
           image: 'nike__item2.png',
           title: 'KD 8 EXT',
-          price: '$ 10.0',
+          desc: 'Lorem ipsum dolor sit amet',
+        },
+        { class: 'pa-0',
+          solid: '-8%',
+          image: 'nike__item3.png',
+          title: 'KD 8 EXT',
+          desc: 'Lorem ipsum dolor sit amet',
+        },
+        { class: 'pa-0',
+          solid: '-8%',
+          image: 'nike__item4.png',
+          title: 'KD 8 EXT',
+          desc: 'Lorem ipsum dolor sit amet',
+        },
+        { class: 'pa-0',
+          solid: '-7%',
+          image: 'nike__item1.png',
+          title: 'KD 8 EXT',
+          desc: 'Lorem ipsum dolor sit amet',
+        },
+        { class: 'pa-0',
+          solid: '-8%',
+          image: 'http://www.serebii.net/pokemongo/pokemon/001.png',
+          title: 'KD 8 EXT',
+          desc: 'Lorem ipsum dolor sit amet',
         },
     ],
 })

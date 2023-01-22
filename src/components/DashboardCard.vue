@@ -246,6 +246,28 @@
             </v-col>
           </row>
         </v-col>
+
+        <v-col cols="12" sm="3" class="mt-n3 pr-0 pb-0">
+          <v-toolbar flat outlined>
+
+          </v-toolbar>
+        </v-col>
+        <v-col cols="12" sm="3" class="mt-n3 pr-0 pb-0">
+          <v-toolbar flat outlined>
+           <v-btn icon class="mr-1">
+              <v-icon color="grey">mdi-chevron-up</v-icon>
+           </v-btn>
+           <v-divider vertical></v-divider>
+           
+          </v-toolbar>
+        </v-col>
+        <v-col cols="12" sm="3" class="mt-n3 px-0 pb-0">
+          <v-toolbar flat outlined class="text-center">
+            <v-pagination v-model="page" :length="4"></v-pagination>
+          </v-toolbar>
+        </v-col>
+
+        
       </v-row>
     </v-card>
   </div>
@@ -255,6 +277,7 @@
 
 export default {
   data: () => ({
+    page: 1,
     items: [
     {
       text: "Home",
